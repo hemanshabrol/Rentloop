@@ -1,0 +1,647 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-container":"#99efe5","inverse-primary":"#b5c9dc","error":"#ba1a1a","on-primary-fixed":"#091d2c","surface-tint":"#4e6071","on-surface-variant":"#43474c","primary-fixed-dim":"#b5c9dc","secondary-fixed":"#9cf2e8","primary-fixed":"#d1e5f9","on-secondary-container":"#006f67","outline":"#74777c","surface-container-low":"#f4f4f0","inverse-on-surface":"#f2f1ed","on-error-container":"#93000a","surface-container-lowest":"#ffffff","surface":"#faf9f5","on-background":"#1b1c1a","on-primary-container":"#7f93a5","primary-container":"#182b3a","on-secondary":"#ffffff","tertiary-container":"#3b2500","on-tertiary-container":"#b68842","on-error":"#ffffff","tertiary-fixed-dim":"#f1be72","surface-container-highest":"#e3e2df","error-container":"#ffdad6","on-tertiary-fixed":"#291800","on-primary":"#ffffff","inverse-surface":"#2f312e","surface-dim":"#dbdad6","tertiary-fixed":"#ffddb1","surface-bright":"#faf9f5","on-primary-fixed-variant":"#364959","secondary-fixed-dim":"#80d5cb","surface-variant":"#e3e2df","surface-container-high":"#e9e8e4","outline-variant":"#c3c7cc","on-tertiary":"#ffffff","on-secondary-fixed":"#00201d","on-secondary-fixed-variant":"#00504a","tertiary":"#201200","on-surface":"#1b1c1a","primary":"#021625","secondary":"#006a63","background":"#faf9f5","surface-container":"#efeeea","on-tertiary-fixed-variant":"#624000"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2.5rem","gutter-mobile":"1rem","space-md":"1rem","margin-mobile":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter":"1.5rem","margin":"3rem","space-lg":"1.5rem"},"fontFamily":{"body-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"display":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.005em","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.03em","fontWeight":"600"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"display":["48px",{"lineHeight":"56px","letterSpacing":"-0.025em","fontWeight":"700"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface text-on-surface font-body-md"><header class="fixed top-0 w-full z-50 bg-[#F8F7F3] border-b border-[#E7E5DF] h-[70px] px-[48px] flex items-center justify-between">
+  <!-- Left: Brand Logo & Wordmark & Tagline -->
+  <div class="flex items-center gap-space-xl shrink-0">
+    <a class="flex items-center gap-space-sm group text-decoration-none" data-path="explore" href="#">
+      <div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm group-hover:bg-primary-container transition-colors">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+          <path d="M18.6 6.62c-1.44 0-2.8.56-3.77 1.53L12 10.96l-2.83-2.81A5.33 5.33 0 0 0 5.4 6.62C2.42 6.62 0 9.04 0 12s2.42 5.38 5.4 5.38c1.44 0 2.8-.56 3.77-1.53L12 13.04l2.83 2.81c.97.97 2.33 1.53 3.77 1.53 2.98 0 5.4-2.42 5.4-5.38s-2.42-5.38-5.4-5.38zm-13.2 8.78c-1.87 0-3.4-1.53-3.4-3.4s1.53-3.4 3.4-3.4c.91 0 1.77.35 2.41.99l2.4 2.41-2.4 2.41c-.64.64-1.5 1-2.41 1zm13.2 0c-.91 0-1.77-.36-2.41-1l-2.4-2.4 2.4-2.41c.64-.64 1.5-.99 2.41-.99 1.87 0 3.4 1.53 3.4 3.4s-1.53 3.4-3.4 3.4z"></path>
+        </svg>
+      </div>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none">RentLoop</span>
+        <span class="font-label-sm text-label-sm text-on-surface-variant font-medium tracking-normal mt-0.5">Access more. Own less.</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- Center: Main Navigation Links -->
+  <nav class="hidden lg:flex items-center gap-space-xs p-1 bg-surface-container/50 rounded-xl" data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-lg">
+    <a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors text-decoration-none" data-path="explore" href="#">Explore</a>
+    <a aria-current="page" class="px-space-md py-space-sm font-label-md text-label-md bg-surface-container-high text-on-surface font-semibold rounded-lg transition-colors text-decoration-none shadow-sm" data-path="my-listings" href="#">My Listings</a>
+    <a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors text-decoration-none" data-path="rental-requests" href="#">Rental Requests</a>
+    <a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors text-decoration-none" data-path="my-rentals" href="#">My Rentals</a>
+  </nav>
+
+  <!-- Right: + List an Item, Segmented Mode Switch, Circular Avatar -->
+  <div class="flex items-center gap-space-md shrink-0">
+    <a class="hidden sm:inline-flex items-center gap-space-xs bg-primary text-on-primary font-label-md text-label-md px-space-lg py-2.5 rounded-lg hover:bg-primary-container shadow-sm transition-all text-decoration-none" data-path="create-listing" href="#">
+      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
+      </svg>
+      <span>+ List an Item</span>
+    </a>
+    <div class="hidden md:flex items-center bg-surface-container p-1 rounded-full shadow-inner border border-surface-container-high">
+      <a class="px-space-md py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors text-decoration-none" data-path="my-rentals" href="#">Renting Mode</a>
+      <a aria-current="page" class="px-space-md py-1.5 rounded-full font-label-sm text-label-sm bg-primary-container text-on-primary shadow-sm font-semibold transition-all text-decoration-none" data-path="my-listings" href="#">Owner Mode</a>
+    </div>
+    <div class="flex items-center gap-space-sm pl-space-xs">
+      <div class="hidden sm:flex flex-col text-right">
+        <span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Alex M.</span>
+        <span class="font-label-sm text-label-sm text-secondary font-medium flex items-center justify-end gap-1">
+          <svg class="w-3 h-3 fill-current text-secondary" viewBox="0 0 24 24">
+            <path d="m10 17-5-5 1.41-1.42L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+          </svg>
+          Campus Verified
+        </span>
+      </div>
+      <div class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md font-bold text-label-md shadow-sm border border-surface-container-highest cursor-pointer hover:bg-primary-container transition-colors" title="Alex M.">
+        AM
+      </div>
+    </div>
+  </div>
+</header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
+<!-- Interactive Toast Notification container (Micro-interaction) -->
+<div class="hidden fixed bottom-6 right-6 z-50 bg-primary text-on-primary px-space-lg py-space-md rounded-xl shadow-xl flex items-center gap-space-md transition-all duration-300" id="toast-banner">
+<span class="material-symbols-outlined text-secondary-container text-[20px]">check_circle</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md leading-tight" id="toast-title">Request Updated</span>
+<span class="font-body-sm text-body-sm text-surface-container-high" id="toast-body">The rental status was modified successfully.</span>
+</div>
+<button class="ml-space-sm text-surface-variant hover:text-on-primary" onclick="document.getElementById('toast-banner').classList.add('hidden')">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="w-full px-margin py-space-xl max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- 1. TOP WELCOME & MODE BANNER -->
+<section class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg pb-space-lg border-b border-surface-container-highest">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Welcome back, Alex.</h1>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary/10 text-secondary font-label-md text-label-md">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Owner View (4 listings active)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-wrap">
+<p class="font-body-lg text-body-lg text-on-surface-variant">Here's what's happening with your listings and rental requests on campus.</p>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors flex items-center gap-1 font-semibold" data-path="my-rentals" href="#">
+<span>Switch to Renter View</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<a class="inline-flex items-center gap-space-xs bg-secondary text-on-secondary px-space-lg py-3 rounded-xl font-title-md text-title-md shadow-sm hover:opacity-95 transition-all text-decoration-none" data-path="create-listing" href="#">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>+ Add New Listing</span>
+</a>
+</div>
+</section>
+<!-- 2. OVERVIEW SUMMARY (4 compact minimal cards in 1 row) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Active Listings</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-display text-display text-primary font-bold leading-none">3</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Visible in marketplace</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-xs relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Pending Requests</span>
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container animate-pulse" title="Needs attention"></span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-display text-display text-primary font-bold leading-none">3</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold">Action needed</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Needs your review</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Active Rentals</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-display text-display text-primary font-bold leading-none">2</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Currently with peers</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Completed Rentals</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-display text-display text-primary font-bold leading-none">14</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Returned successfully</p>
+</div>
+</section>
+<!-- 3. INCOMING RENTAL REQUESTS (MOST PROMINENT & IMPORTANT SECTION) -->
+<section class="flex flex-col gap-space-lg" id="requests-section">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm pb-space-xs">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Rental Requests</h2>
+<span class="px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+              3 pending review
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">You decide who rents. Review details and confirm or decline each request.</p>
+</div>
+</div>
+<!-- List of 3 Spacious Request Cards -->
+<div class="flex flex-col gap-space-md">
+<!-- Request 1 -->
+<article class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col lg:flex-row gap-space-lg items-start" id="request-card-1">
+<div class="w-full lg:w-44 h-36 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img alt="Canon EOS R5 Mirrorless Camera Body" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrBTmXkgC-fO_5X9zHQAbixQi-PyDL2CuC3JxHu0l031rAFiT1MDpD5A0QgrJ8PuHQVIR4f694S9n1vcOX7eVC2ZNyxlPIQ8gbNYMl6ZXQAPqLuk8IYnVFfzGJzYeZOd5QZY-R3dSwcQZGpiEG7itVqm3rjmi70-xUGkpeBPXyDZCvMQ5tZHtG3v-Z7pAAY0Fj_a8ZwI924mCT09rBPrGRg0jEsFHTn64GitS2A1b0-r">
+</div>
+<div class="flex-1 flex flex-col gap-space-sm w-full">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Photography</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Canon EOS R5 Mirrorless Camera Body</h3>
+</div>
+<span class="self-start sm:self-auto px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                Pending Review
+              </span>
+</div>
+<!-- Meta details row -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm py-space-xs bg-surface-container-low px-space-md rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Renter</span>
+<span class="font-title-md text-title-md text-primary font-semibold">Marcus Vance</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Student Union / West Campus</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Requested Dates</span>
+<span class="font-title-md text-title-md text-primary font-semibold">Oct 28 – Oct 31, 2025</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">3 days duration</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pricing Breakdown</span>
+<span class="font-title-md text-title-md text-primary font-bold">₹2,400 Total Requested</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">₹800/day × 3 days</span>
+</div>
+</div>
+<!-- Note from renter -->
+<div class="bg-surface p-space-sm rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">format_quote</span>
+<p class="font-body-md text-body-md text-on-surface italic">
+                “Need it for campus short film project shoot over the weekend. Will pick up at North Quad.”
+              </p>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-space-sm pt-space-xs flex-wrap">
+<button class="bg-secondary text-on-secondary px-space-lg py-2.5 rounded-lg font-label-md text-label-md font-semibold hover:opacity-90 shadow-sm transition-all flex items-center gap-1.5" onclick="approveRequest('request-card-1', 'Marcus Vance', 'Canon EOS R5')">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span>Approve Request</span>
+</button>
+<button class="bg-surface-container-high text-on-surface px-space-md py-2.5 rounded-lg font-label-md text-label-md font-semibold hover:bg-surface-variant transition-colors" onclick="declineRequest('request-card-1', 'Marcus Vance')">
+                Decline
+              </button>
+<button class="text-on-surface-variant hover:text-primary px-space-sm py-2.5 font-label-md text-label-md font-semibold ml-auto transition-colors flex items-center gap-1">
+<span>View Details</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Request 2 -->
+<article class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col lg:flex-row gap-space-lg items-start" id="request-card-2">
+<div class="w-full lg:w-44 h-36 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img alt="Trek Dual Sport Commuter Bike" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrCzgk3Fea6Mvqeyh-7Z028cxA-P8nqdVUF5Zz3rOtft3IIhn7tWUnQbXzzC2_4g-EV8KNAFAvESOf-9M5XGep4w7co65_jB9RScJJLffY3BD0dVtoOnNm4E8cjczTbcID9CTh1SP-IkebVLTNZgKTKEuyAHmgiMOVsUSyrzK_NKe8zdYE6d__g-bZWDrBR2DJ7-D8SqFBD1O7phgtM5c5pF0OTIxsujrn1kD62Eg8Q5">
+</div>
+<div class="flex-1 flex flex-col gap-space-sm w-full">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Mobility</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Trek Dual Sport Commuter Bike</h3>
+</div>
+<span class="self-start sm:self-auto px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                Pending Review
+              </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm py-space-xs bg-surface-container-low px-space-md rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Renter</span>
+<span class="font-title-md text-title-md text-primary font-semibold">Priya Sharma</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Engineering Quad</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Requested Dates</span>
+<span class="font-title-md text-title-md text-primary font-semibold">Oct 29 – Nov 1, 2025</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">3 days duration</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pricing Breakdown</span>
+<span class="font-title-md text-title-md text-primary font-bold">₹900 Total Requested</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">₹300/day × 3 days</span>
+</div>
+</div>
+<div class="bg-surface p-space-sm rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">format_quote</span>
+<p class="font-body-md text-body-md text-on-surface italic">
+                “Daily commute while my bike is being repaired at the shop.”
+              </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs flex-wrap">
+<button class="bg-secondary text-on-secondary px-space-lg py-2.5 rounded-lg font-label-md text-label-md font-semibold hover:opacity-90 shadow-sm transition-all flex items-center gap-1.5" onclick="approveRequest('request-card-2', 'Priya Sharma', 'Trek Dual Sport Bike')">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span>Approve Request</span>
+</button>
+<button class="bg-surface-container-high text-on-surface px-space-md py-2.5 rounded-lg font-label-md text-label-md font-semibold hover:bg-surface-variant transition-colors" onclick="declineRequest('request-card-2', 'Priya Sharma')">
+                Decline
+              </button>
+<button class="text-on-surface-variant hover:text-primary px-space-sm py-2.5 font-label-md text-label-md font-semibold ml-auto transition-colors flex items-center gap-1">
+<span>View Details</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Request 3 -->
+<article class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col lg:flex-row gap-space-lg items-start" id="request-card-3">
+<div class="w-full lg:w-44 h-36 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img alt="Epson Cinema Home Theater Projector" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrA-iBMA_vkxx0ZTJIBZttJMW5wxj55Z8OdAAmd4G6XbeqLpse5Gxa4Xt0I6YScB7UTlTW7B_Oa78HBZKtyd35A3DK0MQc7ONZNXNEEKAMvyB3AFGck-gSRocK0LEwT0KnB22a8QbJyqQp4YBwb8T6voXFa5znnjWaw_drhIy2yI9i1I3kZcX0GzM_BAC0ds80Javi_t_HnAQTofyPnW20ngCfjqxoeVB7Jsq-txceqM">
+</div>
+<div class="flex-1 flex flex-col gap-space-sm w-full">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Media &amp; Tech</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Epson Cinema Home Theater Projector</h3>
+</div>
+<span class="self-start sm:self-auto px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                Pending Review
+              </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm py-space-xs bg-surface-container-low px-space-md rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Renter</span>
+<span class="font-title-md text-title-md text-primary font-semibold">Jordan Lee</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">South Campus Dorms</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Requested Dates</span>
+<span class="font-title-md text-title-md text-primary font-semibold">Nov 2 – Nov 3, 2025</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1 day duration</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pricing Breakdown</span>
+<span class="font-title-md text-title-md text-primary font-bold">₹600 Total Requested</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">₹600/day × 1 day</span>
+</div>
+</div>
+<div class="bg-surface p-space-sm rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">format_quote</span>
+<p class="font-body-md text-body-md text-on-surface italic">
+                “Host movie night for student design club.”
+              </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs flex-wrap">
+<button class="bg-secondary text-on-secondary px-space-lg py-2.5 rounded-lg font-label-md text-label-md font-semibold hover:opacity-90 shadow-sm transition-all flex items-center gap-1.5" onclick="approveRequest('request-card-3', 'Jordan Lee', 'Epson Cinema Projector')">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span>Approve Request</span>
+</button>
+<button class="bg-surface-container-high text-on-surface px-space-md py-2.5 rounded-lg font-label-md text-label-md font-semibold hover:bg-surface-variant transition-colors" onclick="declineRequest('request-card-3', 'Jordan Lee')">
+                Decline
+              </button>
+<button class="text-on-surface-variant hover:text-primary px-space-sm py-2.5 font-label-md text-label-md font-semibold ml-auto transition-colors flex items-center gap-1">
+<span>View Details</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- 4. YOUR LISTINGS (MY LISTINGS GRID) -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md flex-wrap">
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Your Listings</h2>
+<!-- Filter Tabs -->
+<div class="inline-flex items-center bg-surface-container-low p-1 rounded-lg gap-1">
+<button class="px-space-md py-1.5 rounded-md font-label-md text-label-md bg-primary text-on-primary transition-all shadow-sm" id="tab-all" onclick="filterListings('all')">
+              All (4)
+            </button>
+<button class="px-space-md py-1.5 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" id="tab-active" onclick="filterListings('active')">
+              Active (3)
+            </button>
+<button class="px-space-md py-1.5 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" id="tab-paused" onclick="filterListings('paused')">
+              Paused (1)
+            </button>
+</div>
+</div>
+<a class="inline-flex items-center gap-space-xs text-secondary font-label-md text-label-md font-semibold hover:text-primary transition-colors" data-path="create-listing" href="#">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ Add Listing</span>
+</a>
+</div>
+<!-- Listings Grid (4 Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md" id="listings-grid">
+<!-- Listing Card 1 -->
+<article class="listing-item bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group" data-status="active">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-surface-container">
+<img alt="Canon EOS R5 Mirrorless Camera Body" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/ALJJyrBTmXkgC-fO_5X9zHQAbixQi-PyDL2CuC3JxHu0l031rAFiT1MDpD5A0QgrJ8PuHQVIR4f694S9n1vcOX7eVC2ZNyxlPIQ8gbNYMl6ZXQAPqLuk8IYnVFfzGJzYeZOd5QZY-R3dSwcQZGpiEG7itVqm3rjmi70-xUGkpeBPXyDZCvMQ5tZHtG3v-Z7pAAY0Fj_a8ZwI924mCT09rBPrGRg0jEsFHTn64GitS2A1b0-r">
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">Active</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Photography</span>
+<h3 class="font-title-md text-title-md text-primary font-bold line-clamp-1">Canon EOS R5 Mirrorless Camera</h3>
+<p class="font-body-md text-body-md font-bold text-primary">₹800 <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/ day</span></p>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm mt-1">
+<span class="material-symbols-outlined text-[15px]">location_on</span>
+<span>North Quad Dorms</span>
+</div>
+</div>
+<div class="pt-space-sm border-t border-surface-container flex items-center justify-between gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<button class="hover:text-primary transition-colors font-semibold">Edit Listing</button>
+<span>·</span>
+<button class="hover:text-on-tertiary-container transition-colors">Pause</button>
+<span>·</span>
+<button class="hover:text-secondary transition-colors">Preview</button>
+</div>
+</div>
+</article>
+<!-- Listing Card 2 -->
+<article class="listing-item bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group" data-status="active">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-surface-container">
+<img alt="Trek Dual Sport Commuter Bike" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/ALJJyrCzgk3Fea6Mvqeyh-7Z028cxA-P8nqdVUF5Zz3rOtft3IIhn7tWUnQbXzzC2_4g-EV8KNAFAvESOf-9M5XGep4w7co65_jB9RScJJLffY3BD0dVtoOnNm4E8cjczTbcID9CTh1SP-IkebVLTNZgKTKEuyAHmgiMOVsUSyrzK_NKe8zdYE6d__g-bZWDrBR2DJ7-D8SqFBD1O7phgtM5c5pF0OTIxsujrn1kD62Eg8Q5">
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">Active</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mobility</span>
+<h3 class="font-title-md text-title-md text-primary font-bold line-clamp-1">Trek Dual Sport Commuter Bike</h3>
+<p class="font-body-md text-body-md font-bold text-primary">₹300 <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/ day</span></p>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm mt-1">
+<span class="material-symbols-outlined text-[15px]">location_on</span>
+<span>Central Campus Bike Rack</span>
+</div>
+</div>
+<div class="pt-space-sm border-t border-surface-container flex items-center justify-between gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<button class="hover:text-primary transition-colors font-semibold">Edit Listing</button>
+<span>·</span>
+<button class="hover:text-on-tertiary-container transition-colors">Pause</button>
+<span>·</span>
+<button class="hover:text-secondary transition-colors">Preview</button>
+</div>
+</div>
+</article>
+<!-- Listing Card 3 -->
+<article class="listing-item bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group" data-status="active">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-surface-container">
+<img alt="Epson Cinema Home Theater Projector" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/ALJJyrA-iBMA_vkxx0ZTJIBZttJMW5wxj55Z8OdAAmd4G6XbeqLpse5Gxa4Xt0I6YScB7UTlTW7B_Oa78HBZKtyd35A3DK0MQc7ONZNXNEEKAMvyB3AFGck-gSRocK0LEwT0KnB22a8QbJyqQp4YBwb8T6voXFa5znnjWaw_drhIy2yI9i1I3kZcX0GzM_BAC0ds80Javi_t_HnAQTofyPnW20ngCfjqxoeVB7Jsq-txceqM">
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">Active</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Media &amp; Tech</span>
+<h3 class="font-title-md text-title-md text-primary font-bold line-clamp-1">Epson Cinema Projector</h3>
+<p class="font-body-md text-body-md font-bold text-primary">₹600 <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/ day</span></p>
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm mt-1">
+<span class="material-symbols-outlined text-[15px]">location_on</span>
+<span>North Quad Dorms</span>
+</div>
+</div>
+<div class="pt-space-sm border-t border-surface-container flex items-center justify-between gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<button class="hover:text-primary transition-colors font-semibold">Edit Listing</button>
+<span>·</span>
+<button class="hover:text-on-tertiary-container transition-colors">Pause</button>
+<span>·</span>
+<button class="hover:text-secondary transition-colors">Preview</button>
+</div>
+</div>
+</article>
+<!-- Listing Card 4 (Paused) -->
+<article class="listing-item bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group opacity-90" data-status="paused">
+<div class="relative aspect-[4/3] w-full overflow-hidden bg-surface-container">
+<img alt="TI-84 Plus CE Graphing Calculator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 grayscale-[30%]" src="https://lh3.googleusercontent.com/aida/ALJJyrBLQOG49zHR6m6fuUoCdunfY4bBBgxMALL816_10ZJnqwcAN5YBHnq8gX-1Ip0OvCa1arPLklDHMZZfZarGhgFKabXiLhj5ljCVr_93oFMCWza_xVh2rfSdc5rSU7NEzuMTaVyKKY20GUMO7ZonoGna3Dybj6VFQKAoFGJL4mIn8Q_BVJuob4yJzJD_yj6zQQRyNpG0pBnNe56KMjGfiulBp1HS_etruaeTzHx4RWO_">
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface-variant">Paused</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Academic</span>
+<h3 class="font-title-md text-title-md text-primary font-bold line-clamp-1">TI-84 Plus CE Calculator</h3>
+<p class="font-body-md text-body-md font-bold text-primary">₹100 <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/ day</span></p>
+<div class="flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm mt-1">
+<span class="material-symbols-outlined text-[15px]">info</span>
+<span>Personal use during midterms</span>
+</div>
+</div>
+<div class="pt-space-sm border-t border-surface-container flex items-center justify-between gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<button class="hover:text-primary transition-colors font-semibold">Edit Listing</button>
+<span>·</span>
+<button class="hover:text-secondary transition-colors font-medium">Resume</button>
+<span>·</span>
+<button class="hover:text-secondary transition-colors">Preview</button>
+</div>
+</div>
+</article>
+</div>
+<!-- 7. GENTLE TIP CALLOUT -->
+<div class="bg-surface-container p-space-md rounded-xl flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[22px]">lightbulb</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+<strong class="font-semibold text-primary">Listing another item?</strong> Clear photos and realistic daily rates receive inquiries faster on campus.
+        </p>
+</div>
+</section>
+<!-- 5. ACTIVE RENTALS ("CURRENTLY RENTED") -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Currently Rented</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Items currently handed off to peers. Mark completed once safely returned.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Active Rental 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between gap-space-md" id="rental-1">
+<div class="flex items-start gap-space-md">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img alt="TI-84 Plus CE Graphing Calculator" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrBLQOG49zHR6m6fuUoCdunfY4bBBgxMALL816_10ZJnqwcAN5YBHnq8gX-1Ip0OvCa1arPLklDHMZZfZarGhgFKabXiLhj5ljCVr_93oFMCWza_xVh2rfSdc5rSU7NEzuMTaVyKKY20GUMO7ZonoGna3Dybj6VFQKAoFGJL4mIn8Q_BVJuob4yJzJD_yj6zQQRyNpG0pBnNe56KMjGfiulBp1HS_etruaeTzHx4RWO_">
+</div>
+<div class="flex flex-col gap-1 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Academic</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+                  In Progress · On Schedule
+                </span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold">TI-84 Plus CE Graphing Calculator</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Currently with <strong class="text-primary font-semibold">Sarah Jenkins</strong> (Math Dept / East Campus)
+              </p>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm mt-1">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">schedule</span>
+<span>Rental period: Oct 22 – Oct 26 <strong class="text-on-tertiary-container font-semibold">(Due tomorrow)</strong></span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-space-xs border-t border-surface-container flex-wrap">
+<button class="bg-surface-container-high hover:bg-secondary hover:text-on-secondary text-primary font-label-md text-label-md font-semibold px-space-md py-2 rounded-lg transition-all flex items-center gap-1.5" onclick="markReturned('rental-1', 'TI-84 Plus CE')">
+<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+<span>Mark as Returned / Completed</span>
+</button>
+<button class="text-secondary hover:text-primary font-label-md text-label-md font-semibold flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Message Sarah</span>
+</button>
+</div>
+</div>
+<!-- Active Rental 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between gap-space-md" id="rental-2">
+<div class="flex items-start gap-space-md">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[36px] text-on-surface-variant">headphones</span>
+</div>
+<div class="flex flex-col gap-1 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Audio &amp; Sound</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+                  In Progress
+                </span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold">Sony Wireless Noise-Cancelling Headphones</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Currently with <strong class="text-primary font-semibold">Alex Rivera</strong> (Library Quad)
+              </p>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm mt-1">
+<span class="material-symbols-outlined text-[16px]">event</span>
+<span>Rental period: Oct 20 – Oct 27</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-space-xs border-t border-surface-container flex-wrap">
+<button class="bg-surface-container-high hover:bg-secondary hover:text-on-secondary text-primary font-label-md text-label-md font-semibold px-space-md py-2 rounded-lg transition-all flex items-center gap-1.5" onclick="markReturned('rental-2', 'Sony Wireless Headphones')">
+<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+<span>Mark as Returned / Completed</span>
+</button>
+<button class="text-secondary hover:text-primary font-label-md text-label-md font-semibold flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Message Alex</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. RECENT ACTIVITY (Clean minimal timeline, NO complex charts) -->
+<section class="flex flex-col gap-space-md">
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Recent Activity</h2>
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col divide-y divide-surface-container">
+<!-- Activity 1 -->
+<div class="flex items-center gap-space-md py-space-sm first:pt-0 last:pb-0">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">inbox</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between flex-1 gap-1">
+<span class="font-body-md text-body-md text-on-surface">
+              Rental request received from <strong class="text-primary font-semibold">Marcus Vance</strong> for <strong class="text-primary font-semibold">Canon EOS R5</strong>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant shrink-0">2 hours ago</span>
+</div>
+</div>
+<!-- Activity 2 -->
+<div class="flex items-center gap-space-md py-space-sm first:pt-0 last:pb-0">
+<div class="w-9 h-9 rounded-full bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between flex-1 gap-1">
+<span class="font-body-md text-body-md text-on-surface">
+              Request approved for <strong class="text-primary font-semibold">Sarah Jenkins</strong> (TI-84 Plus)
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant shrink-0">Yesterday at 4:15 PM</span>
+</div>
+</div>
+<!-- Activity 3 -->
+<div class="flex items-center gap-space-md py-space-sm first:pt-0 last:pb-0">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">published_with_changes</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between flex-1 gap-1">
+<span class="font-body-md text-body-md text-on-surface">
+              Rental completed: <strong class="text-primary font-semibold">Epson Projector</strong> returned by <strong class="text-primary font-semibold">David K.</strong>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant shrink-0">3 days ago</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  function showToast(title, message) {
+    const banner = document.getElementById('toast-banner');
+    const toastTitle = document.getElementById('toast-title');
+    const toastBody = document.getElementById('toast-body');
+    if (!banner || !toastTitle || !toastBody) return;
+    toastTitle.textContent = title;
+    toastBody.textContent = message;
+    banner.classList.remove('hidden');
+    setTimeout(() => {
+      banner.classList.add('hidden');
+    }, 4500);
+  }
+
+  function approveRequest(elementId, renterName, itemName) {
+    const card = document.getElementById(elementId);
+    if (card) {
+      card.style.opacity = '0.5';
+      card.style.pointerEvents = 'none';
+    }
+    showToast('Request Approved', `You accepted ${renterName}'s request for ${itemName}.`);
+  }
+
+  function declineRequest(elementId, renterName) {
+    const card = document.getElementById(elementId);
+    if (card) {
+      card.style.opacity = '0.4';
+      card.style.pointerEvents = 'none';
+    }
+    showToast('Request Declined', `Declined request from ${renterName}.`);
+  }
+
+  function markReturned(rentalId, itemName) {
+    const el = document.getElementById(rentalId);
+    if (el) {
+      el.style.opacity = '0.4';
+      el.style.pointerEvents = 'none';
+    }
+    showToast('Rental Completed', `${itemName} marked as safely returned.`);
+  }
+
+  function filterListings(type) {
+    const tabs = ['all', 'active', 'paused'];
+    tabs.forEach(t => {
+      const btn = document.getElementById('tab-' + t);
+      if (btn) {
+        if (t === type) {
+          btn.className = "px-space-md py-1.5 rounded-md font-label-md text-label-md bg-primary text-on-primary transition-all shadow-sm";
+        } else {
+          btn.className = "px-space-md py-1.5 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors";
+        }
+      }
+    });
+
+    const items = document.querySelectorAll('.listing-item');
+    items.forEach(item => {
+      const status = item.getAttribute('data-status');
+      if (type === 'all' || status === type) {
+        item.style.display = 'flex';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+</script></main><footer class="w-full bg-surface-container-low shadow-[0_-1px_6px_rgba(24,43,58,0.03)] mt-space-xl"><div class="w-full px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-space-xl"><div class="lg:col-span-4 flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><div class="w-7 h-7 rounded-lg bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[18px]">all_inclusive</span></div><span class="font-headline-sm text-headline-sm text-primary font-bold">RentLoop</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm mt-space-xs">The verified peer-to-peer campus equipment ecosystem. Rent gear securely from students across residence halls and academic departments.</p><div class="flex items-center gap-space-xs mt-space-sm"><span class="material-symbols-outlined text-secondary text-[18px]">school</span><span class="font-label-sm text-label-sm text-on-surface-variant">Available exclusively on verified university networks</span></div></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface font-semibold">Categories</h3><ul class="flex flex-col gap-space-xs text-on-surface-variant font-body-md text-body-md"><li><a class="hover:text-on-surface transition-colors" data-path="explore" href="#">Electronics &amp; Computing</a></li><li><a class="hover:text-on-surface transition-colors" data-path="explore" href="#">Photography &amp; Cine</a></li><li><a class="hover:text-on-surface transition-colors" data-path="explore" href="#">Sports &amp; Mobility</a></li><li><a class="hover:text-on-surface transition-colors" data-path="explore" href="#">Academic &amp; Lab Gear</a></li></ul></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface font-semibold">Platform</h3><ul class="flex flex-col gap-space-xs text-on-surface-variant font-body-md text-body-md"><li><a class="hover:text-on-surface transition-colors" data-path="how-it-works" href="#">How it works</a></li><li><a class="hover:text-on-surface transition-colors" data-path="community-guidelines" href="#">Community Guidelines</a></li><li><a class="hover:text-on-surface transition-colors" data-path="trust-safety" href="#">Trust &amp; Safety</a></li><li><a class="hover:text-on-surface transition-colors" data-path="help-support" href="#">Help &amp; Support</a></li></ul></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md text-on-surface font-semibold">Security</h3><div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-xs"><div class="flex items-center gap-1.5 text-secondary font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">shield</span><span>Protected Deposits</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">All exchanges are campus-id validated with integrated security escrow.</p></div></div></div><div class="mt-space-xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm"><p>© 2025 RentLoop Technologies Inc. Academic Campus Network. All rights reserved.</p><div class="flex items-center gap-space-lg"><a class="hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="hover:text-on-surface transition-colors" data-path="campus-status" href="#">Campus Status</a></div></div></div></footer>
+
+</body></html>

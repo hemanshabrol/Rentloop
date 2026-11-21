@@ -1,0 +1,517 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>RentLoop - Campus Peer-to-Peer Rental Network</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "on-secondary-fixed": "#00201d", "surface-container-low": "#f4f4f0", "on-tertiary-container": "#b68842", "on-tertiary-fixed-variant": "#624000", "surface-tint": "#4e6071", "on-surface": "#1b1c1a", "on-error-container": "#93000a", "outline-variant": "#c3c7cc", "secondary-fixed-dim": "#80d5cb", "secondary": "#006a63", "on-secondary-container": "#006f67", "on-primary-container": "#7f93a5", "on-surface-variant": "#43474c", "on-tertiary": "#ffffff", "secondary-container": "#99efe5", "surface-container": "#efeeea", "surface-variant": "#e3e2df", "primary-fixed": "#d1e5f9", "tertiary-fixed-dim": "#f1be72", "tertiary": "#201200", "primary-container": "#182b3a", "tertiary-container": "#3b2500", "outline": "#74777c", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "on-primary-fixed-variant": "#364959", "on-tertiary-fixed": "#291800", "tertiary-fixed": "#ffddb1", "primary-fixed-dim": "#b5c9dc", "on-primary-fixed": "#091d2c", "on-primary": "#ffffff", "surface-dim": "#dbdad6", "surface": "#faf9f5", "on-secondary-fixed-variant": "#00504a", "inverse-on-surface": "#f2f1ed", "surface-container-high": "#e9e8e4", "background": "#faf9f5", "inverse-surface": "#2f312e", "surface-container-highest": "#e3e2df", "on-secondary": "#ffffff", "primary": "#021625", "inverse-primary": "#b5c9dc", "surface-bright": "#faf9f5", "secondary-fixed": "#9cf2e8", "on-background": "#1b1c1a", "on-error": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "space-md": "1rem", "margin": "3rem", "margin-mobile": "1rem", "space-xs": "0.25rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-[#F8F7F3] border-b border-[#E7E5DF] h-[70px] flex items-center px-12">
+  <div class="w-full max-w-7xl mx-auto flex items-center justify-between gap-6">
+    <!-- Left: RentLoop Logo & Tagline -->
+    <div class="flex items-center gap-6 flex-shrink-0">
+      <a href="#" data-path="explore" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary transition-transform group-hover:scale-105">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18.6 6.62c-1.44 0-2.8.56-3.77 1.53L12 10.98l-2.83-2.83C8.2 7.18 6.84 6.62 5.4 6.62 2.42 6.62 0 9.04 0 12.02s2.42 5.4 5.4 5.4c1.44 0 2.8-.56 3.77-1.53L12 13.06l2.83 2.83c.97.97 2.33 1.53 3.77 1.53 2.98 0 5.4-2.42 5.4-5.4s-2.42-5.4-5.4-5.4zm-13.2 9c-1.99 0-3.6-1.61-3.6-3.6s1.61-3.6 3.6-3.6c.96 0 1.86.38 2.54 1.06L10.59 12l-2.65 2.56c-.68.68-1.58 1.06-2.54 1.06zm13.2 0c-.96 0-1.86-.38-2.54-1.06L13.41 12l2.65-2.56c.68-.68 1.58-1.06 2.54-1.06 1.99 0 3.6 1.61 3.6 3.6s-1.61 3.6-3.6 3.6z"></path>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm text-primary leading-none tracking-tight">RentLoop</span>
+          <span class="font-label-sm text-label-sm text-on-surface-variant font-normal tracking-wide mt-0.5">Access more. Own less.</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Center: Navigation Links with Active Filled Background for My Rentals -->
+    <nav class="hidden xl:flex items-center gap-1 p-1 bg-surface-container-low rounded-full" data-active-classes="bg-primary-container text-on-primary rounded-full px-space-md py-1.5 shadow-sm">
+      <a href="#" data-path="explore" class="font-label-md text-label-md px-4 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface transition-colors">Explore</a>
+      <a href="#" data-path="my-listings" class="font-label-md text-label-md px-4 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface transition-colors">My Listings</a>
+      <a href="#" data-path="rental-requests" class="font-label-md text-label-md px-4 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface transition-colors">Rental Requests</a>
+      <a href="#" data-path="my-rentals" aria-current="page" class="font-label-md transition-colors bg-primary-container text-on-primary rounded-full px-4 py-1.5 shadow-sm">My Rentals</a>
+    </nav>
+
+    <!-- Right: Action Buttons, Segmented Mode Switch & Circular Profile Avatar -->
+    <div class="flex items-center gap-4 flex-shrink-0">
+      <a href="#" data-path="list-an-item" class="hidden md:flex items-center gap-1.5 bg-surface-container-lowest text-primary hover:bg-surface-container font-label-md text-label-md px-3.5 py-2 rounded-lg border border-[#E7E5DF] transition-colors shadow-sm">
+        <svg class="w-4 h-4 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="16"></line>
+          <line x1="8" y1="12" x2="16" y2="12"></line>
+        </svg>
+        <span>List an Item</span>
+      </a>
+
+      <div class="hidden lg:flex items-center p-1 bg-surface-container-low rounded-full border border-[#E7E5DF]">
+        <a href="#" data-path="my-rentals" class="font-label-sm text-label-sm px-3 py-1.5 rounded-full bg-primary-container text-on-primary shadow-sm transition-all">Renting Mode</a>
+        <a href="#" data-path="my-listings" class="font-label-sm text-label-sm px-3 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface transition-all">Owner Mode</a>
+      </div>
+
+      <div class="flex items-center gap-2.5 pl-1">
+        <div class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md font-semibold flex-shrink-0 shadow-sm">
+          AM
+        </div>
+        <div class="hidden 2xl:flex flex-col text-left">
+          <span class="font-label-md text-label-md text-primary leading-tight font-medium">Alex M.</span>
+          <span class="font-label-sm text-label-sm text-secondary font-medium leading-tight">Student Host</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<div class="w-full px-margin py-space-lg flex flex-col gap-space-xl max-w-7xl mx-auto">
+<!-- Top Context & Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Renter View (2 active items)
+          </span>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-0.5" data-path="my-listings" href="#">
+            Switch to Owner View →
+          </a>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-1">
+          Your rentals, all in one place.
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          Keep track of your requests, upcoming rentals, and completed bookings across campus.
+        </p>
+</div>
+<a class="inline-flex items-center justify-center gap-space-xs bg-primary text-on-primary font-label-md text-label-md px-space-lg py-3 rounded-lg shadow-sm hover:bg-primary-container transition-all flex-shrink-0" data-path="explore" href="#">
+<span class="material-symbols-outlined text-[18px]">travel_explore</span>
+<span>Explore Marketplace</span>
+</a>
+</div>
+<!-- Section 1: Overview Summary Metrics -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- 1. Pending Requests -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Pending Requests</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed/60 text-on-tertiary-fixed-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+            Action req.
+          </span>
+</div>
+<div class="mt-4 mb-1">
+<span class="font-display text-display text-primary leading-none">2</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Awaiting owner confirmation</span>
+</div>
+<!-- 2. Approved Rentals -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Approved Rentals</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">event_upcoming</span>
+</div>
+<div class="mt-4 mb-1">
+<span class="font-display text-display text-primary leading-none">1</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ready for campus pickup</span>
+</div>
+<!-- 3. Currently Renting -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Currently Renting</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">handshake</span>
+</div>
+<div class="mt-4 mb-1">
+<span class="font-display text-display text-secondary leading-none">2</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Items in your possession</span>
+</div>
+<!-- 4. Completed Rentals -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Completed Rentals</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">task_alt</span>
+</div>
+<div class="mt-4 mb-1">
+<span class="font-display text-display text-primary leading-none">7</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Returned on time</span>
+</div>
+</div>
+<!-- Section 2: Pending Requests -->
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-primary">Pending Requests</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed/70 text-on-tertiary-fixed-variant font-label-sm text-label-sm">2 pending</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Owners typically respond within a few hours. No payment processed yet.</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Request Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="p-space-md flex flex-col sm:flex-row gap-space-md">
+<div class="w-full sm:w-40 h-36 flex-shrink-0 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Canon EOS R5 mirrorless camera with prime lens resting on a rich solid oak library study desk at campus, natural soft morning library light, warm tones, architectural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHbUd6ApRnVOWew_KtOwnTARuDCLxWgc-fG8NMomKyHYUtbMyY4JKqZxcEjYZAaqMbzvgAnmeYt4OgbmBJpTpGSNvhj5EemMgbnATvnlc3skc2LGvXYKuVqv4qRzeKaDT6CQwhjJvSQh4IqNDE4MuXD76NcrX7qd4cxFN4_SLROIbzbNVpn5l49rpALuJLxCE-VctEfbTCZSImV0xJie0PG5b7v01biDY-aBwZRpE">
+</div>
+<div class="flex flex-col justify-between flex-grow min-w-0">
+<div>
+<div class="flex items-center justify-between gap-space-xs mb-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Photography</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed/60 text-on-tertiary-fixed-variant font-label-sm text-label-sm">
+                    Pending Owner
+                  </span>
+</div>
+<h3 class="font-title-md text-title-md text-primary truncate">Canon EOS R5 Mirrorless Camera Body</h3>
+<div class="flex items-center gap-1.5 text-on-surface-variant mt-1 font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px]">person</span>
+<span>David K. • South Campus Arts</span>
+</div>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low px-space-sm py-1.5 rounded-md flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nov 20 – Nov 23 (3 days)</span>
+<span class="font-label-md text-label-md text-primary font-bold">₹800/day · ₹2,400 Total</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">schedule</span>
+<span class="truncate">Waiting for owner confirmation.</span>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" data-path="explore" href="#">View Listing</a>
+<button class="px-3 py-1 rounded bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-sm text-label-sm transition-colors" type="button">
+                Cancel Request
+              </button>
+</div>
+</div>
+</div>
+<!-- Request Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="p-space-md flex flex-col sm:flex-row gap-space-md">
+<div class="w-full sm:w-40 h-36 flex-shrink-0 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Modern compact smart home theater projector sitting on an oak floating wall shelf in a clean contemporary campus apartment room with botanical accents and warm ambient illumination" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQTYzbkxxDrj_t0QQe-7eMMTAtYrhOfnaDRCawY14zJqldjEGNntcMP6XOtoCSA4DCSmCMPf_X_YZicN7ktPELKONbx_PQ9IKCS7FgAT8WWMJMGCMj3tj8CJxlX5_k_0QHg-GGE8sQEuNDuhUrhC5bxckkKPuJCCZm7zm9txbwBdRyjJV3alcPI-uZFiTtRpVwjKDy-P4mYdEB8R5ZFgLuy14NRmkYIeTkuJlWGvU">
+</div>
+<div class="flex flex-col justify-between flex-grow min-w-0">
+<div>
+<div class="flex items-center justify-between gap-space-xs mb-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Media &amp; Tech</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed/60 text-on-tertiary-fixed-variant font-label-sm text-label-sm">
+                    Pending Owner
+                  </span>
+</div>
+<h3 class="font-title-md text-title-md text-primary truncate">Epson Cinema Smart Projector</h3>
+<div class="flex items-center gap-1.5 text-on-surface-variant mt-1 font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px]">person</span>
+<span>Marcus T. • West Quad Dorms</span>
+</div>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low px-space-sm py-1.5 rounded-md flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nov 22 – Nov 24 (2 days)</span>
+<span class="font-label-md text-label-md text-primary font-bold">₹600/day · ₹1,200 Total</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">schedule</span>
+<span class="truncate">Waiting for Marcus to review.</span>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" data-path="explore" href="#">View Listing</a>
+<button class="px-3 py-1 rounded bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-sm text-label-sm transition-colors" type="button">
+                Cancel Request
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Approved Rentals -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-primary">Approved Rentals</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm">1 confirmed</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col md:flex-row gap-space-lg items-center">
+<div class="w-full md:w-56 h-44 rounded-lg overflow-hidden bg-surface-container flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Matte olive green commuter bicycle with heavy duty front rack and pannier bags parked along a textured concrete brutalist campus wall bathed in warm afternoon golden hour sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8L9hljyLV3SbWKIX4hCi6KHnpPP4Ns5V8hA3Rdh78FwOS8YvZ2pcGlfqhQAOtWnuAnTNJPlGwhJp2nAaWvQxVt1RwOUW4rDRj42mtm5tEqQH9VeKuYXkTg0dk1dIp7Pbg2qbjpFa3pVy_LP_7BPST3NQKwwLM8ppursNsYuLc6k2DvhJcjNPIvAnpy17o7t_HRUZqymfF_XHFE9i_uvgQd-ZpTMzIkd6vkIqMGKI">
+</div>
+<div class="flex flex-col justify-between flex-grow w-full gap-space-sm">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Mobility &amp; Transit</span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+                Approved • Pickup Scheduled
+              </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Trek Dual Sport Commuter Bike (with U-Lock)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Host: <strong class="text-on-surface font-semibold">Priya Sharma</strong> • Engineering Quad Hub
+            </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">calendar_month</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rental Window</span>
+<span class="font-label-md text-label-md text-primary">Nov 17 – Nov 20 (3 days)</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">payments</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rate &amp; Total</span>
+<span class="font-label-md text-label-md text-primary">₹300/day · ₹900 Total</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">location_on</span>
+<span>Meeting at Central Campus Bike Hub. Contact host for exact spot.</span>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-error transition-colors px-2 py-1" type="button">
+                Cancel Booking
+              </button>
+<button class="px-4 py-2 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high font-label-md text-label-md transition-colors" type="button">
+                View Pickup Details
+              </button>
+<button class="px-4 py-2 rounded-lg bg-secondary text-on-secondary hover:bg-secondary/90 font-label-md text-label-md transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+                Message Priya
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: Current Rentals (In Progress) -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-primary">Currently Renting</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">2 items active</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-medium hidden sm:inline">Active coverage in effect</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Active 1: Calculator -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between gap-space-md">
+<div class="flex flex-col sm:flex-row gap-space-md">
+<div class="w-full sm:w-36 h-36 rounded-lg overflow-hidden bg-surface-container flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Texas Instruments TI-84 Plus CE graphing calculator standing upright on a wooden university study table with handwritten calculus notes, open math notebook, and UCLA mug" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdEuHG4KdS-E5Y04WiMZ-Oq6VPp_53DcQdWQJquhvUHEHyu7aNOxBaKK1EtI1bmWfr5Dv9cM2BGvM2LZ_VCXAETmpCPspaDs7LWBWXUtv6VGKjzGUhmLsFCXwYSVVyEgy1nByeH-KPNsqz6YcKmgdc05GfX_a0zp0Hu1-ZlEJe1P2OHlXpy3s5vGBj79j5Jih3wvJUnWNo3oD9Zzk3EaH5xTKwUyX_wrDQbX74YDs">
+</div>
+<div class="flex flex-col justify-between flex-grow min-w-0">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Academic &amp; Lab Gear</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Active Hand-off
+                  </span>
+</div>
+<h3 class="font-title-md text-title-md text-primary truncate">TI-84 Plus CE Graphing Calculator</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Sarah Jenkins (Math Dept / East Campus)</p>
+</div>
+<!-- Due notification banner -->
+<div class="mt-2 bg-error-container/40 p-2 rounded-lg flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-error text-[18px]">alarm</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-error">Return due tomorrow by 6:00 PM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Period: Nov 8 – Nov 12</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-2 bg-surface-container-low/50 -mx-space-md -mb-space-md p-space-md rounded-b-xl">
+<button class="font-label-sm text-label-sm text-primary hover:text-secondary flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">info</span>
+              Return Instructions
+            </button>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-sm text-label-sm transition-colors" type="button">
+                Request Extension
+              </button>
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+                Message Sarah
+              </button>
+</div>
+</div>
+</div>
+<!-- Active 2: Sony Headphones -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between gap-space-md">
+<div class="flex flex-col sm:flex-row gap-space-md">
+<div class="w-full sm:w-36 h-36 rounded-lg overflow-hidden bg-surface-container flex-shrink-0 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Matte black premium over-ear noise cancelling headphones lying sleekly beside an open college notebook and coffee cup in a sunlit university library commons" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWTg6et3eA_qOsFTXvwqHY5Dso_75oKHrHQD62zz-WLghGrMB2OZZjcbZsTKYFRmtqVBk21KvLnjQfTWUdW87V31ojFnOB1FOdR7svvH1EV82fT-1PHI9aJLGHsLVmiI4I67lFjRf8OfoApSeJ0umYy0VRPI8WM0yBERTiAI-KSWEycVdI3wW8dPh--zE0WNuwpezzykIannvZYNI7apBKT2ciRRKKuFFDpL5JoHA">
+</div>
+<div class="flex flex-col justify-between flex-grow min-w-0">
+<div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Audio &amp; Tech</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Active Hand-off
+                  </span>
+</div>
+<h3 class="font-title-md text-title-md text-primary truncate">Sony WH-1000XM4 Noise-Cancelling</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Alex Rivera (Library Quad / Arts)</p>
+</div>
+<!-- Due banner -->
+<div class="mt-2 bg-surface-container p-2 rounded-lg flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">calendar_today</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-primary">Due in 3 days (Nov 14 by 8:00 PM)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Period: Nov 6 – Nov 14</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-2 bg-surface-container-low/50 -mx-space-md -mb-space-md p-space-md rounded-b-xl">
+<button class="font-label-sm text-label-sm text-primary hover:text-secondary flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">info</span>
+              Return Instructions
+            </button>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-sm text-label-sm transition-colors" type="button">
+                Request Extension
+              </button>
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+                Message Alex
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 5: Rental History -->
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-primary">Rental History</h2>
+<!-- Filter Tabs -->
+<div class="flex items-center gap-space-xs p-1 bg-surface-container-low rounded-lg w-fit">
+<button class="font-label-sm text-label-sm px-3 py-1.5 rounded-md bg-surface-container-lowest text-primary shadow-sm" type="button">
+            All (7)
+          </button>
+<button class="font-label-sm text-label-sm px-3 py-1.5 rounded-md text-on-surface-variant hover:text-primary transition-colors" type="button">
+            Completed (6)
+          </button>
+<button class="font-label-sm text-label-sm px-3 py-1.5 rounded-md text-on-surface-variant hover:text-primary transition-colors" type="button">
+            Cancelled (1)
+          </button>
+</div>
+</div>
+<!-- History Rows Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Row 1: Completed (Needs Review) -->
+<div class="p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface/50 transition-colors">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">mic</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-primary">Zoom H6 Handy Audio Recorder</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Owner: Carlos M. • Oct 24 – Oct 27 (3 days)</span>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-lg flex-shrink-0">
+<div class="flex flex-col text-left md:text-right">
+<span class="font-title-md text-title-md text-primary">₹1,350</span>
+<span class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                Returned &amp; Completed
+              </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded bg-secondary text-on-secondary hover:bg-secondary/90 font-label-sm text-label-sm transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">star</span>
+                Leave a Review
+              </button>
+<button class="px-3 py-1.5 rounded bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-sm text-label-sm transition-colors" type="button">
+                Rent Again
+              </button>
+</div>
+</div>
+</div>
+<div class="h-px w-full bg-surface-container"></div>
+<!-- Row 2: Completed (Already Reviewed) -->
+<div class="p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface/50 transition-colors">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">videocam</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-primary">DJI Ronin-SC Camera Gimbal</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Owner: Maya Patel • Oct 15 – Oct 18 (3 days)</span>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-lg flex-shrink-0">
+<div class="flex flex-col text-left md:text-right">
+<span class="font-title-md text-title-md text-primary">₹1,500</span>
+<span class="inline-flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">star</span>
+                5.0 "Great condition, smooth pickup"
+              </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-sm text-label-sm transition-colors" type="button">
+                Rent Again
+              </button>
+</div>
+</div>
+</div>
+<div class="h-px w-full bg-surface-container"></div>
+<!-- Row 3: Cancelled -->
+<div class="p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface/50 transition-colors opacity-80">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center flex-shrink-0 text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px]">cabin</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-primary line-through text-on-surface-variant">Camping Tent &amp; Sleeping Pad (2-Person)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Owner: Liam O. • Oct 8 – Oct 10</span>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-lg flex-shrink-0">
+<div class="flex flex-col text-left md:text-right">
+<span class="font-title-md text-title-md text-on-surface-variant">₹700</span>
+<span class="inline-flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">cancel</span>
+                Cancelled by Renter
+              </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-sm text-label-sm transition-colors" type="button">
+                Re-request
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 6: Campus Community Discovery Prompt -->
+<div class="bg-primary text-on-primary rounded-xl p-space-xl flex flex-col md:flex-row md:items-center justify-between gap-space-lg shadow-md relative overflow-hidden">
+<div class="flex flex-col gap-space-xs max-w-xl z-10">
+<span class="font-label-sm text-label-sm text-secondary-fixed tracking-wider uppercase font-semibold">Campus Peer Economy</span>
+<h2 class="font-headline-md text-headline-md text-on-primary tracking-tight">Looking for something else this semester?</h2>
+<p class="font-body-md text-body-md text-on-primary/80">
+          From lab equipment and drawing pads to camping gear and projectors, borrow what you need directly from verified classmates.
+        </p>
+<div class="flex items-center gap-space-md mt-2 text-on-primary/70 font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">format_image_left</span>
+            Zero hidden deposit fees
+          </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">pin_drop</span>
+            Direct peer exchanges on campus
+          </span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-start md:items-center gap-space-sm z-10 flex-shrink-0">
+<a class="inline-flex items-center gap-space-xs bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-fixed-dim font-label-md text-label-md px-space-lg py-3 rounded-lg transition-colors font-semibold shadow-sm" data-path="explore" href="#">
+<span class="material-symbols-outlined text-[18px]">search</span>
+          Explore Marketplace
+        </a>
+</div>
+<!-- Subtle background radial aura for visual depth -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-secondary/20 rounded-full blur-3xl pointer-events-none"></div>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-low py-space-xl mt-space-xl"><div class="w-full px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-space-xl"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs mb-space-xs"><div class="w-7 h-7 rounded-md bg-primary-container flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[16px]">all_inclusive</span></div><span class="font-headline-sm text-headline-sm text-primary">RentLoop</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">The trusted collegiate peer-to-peer equipment and resource network. Designed exclusively for university campus communities.</p><div class="flex items-center gap-space-xs mt-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span><span class="font-label-sm text-label-sm text-secondary font-semibold">Academic Verification Required</span></div></div><div class="flex flex-col gap-space-xs"><span class="font-title-md text-title-md text-primary mb-space-xs">Categories</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="explore" href="#">Electronics &amp; Computing</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="explore" href="#">Photography &amp; Cine</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="explore" href="#">Sports &amp; Mobility</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="explore" href="#">Academic &amp; Lab Gear</a></div><div class="flex flex-col gap-space-xs"><span class="font-title-md text-title-md text-primary mb-space-xs">Platform</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="how-it-works" href="#">How it works</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="community-guidelines" href="#">Community Guidelines</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="trust-safety" href="#">Trust &amp; Safety</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="help-support" href="#">Help &amp; Support</a></div><div class="flex flex-col gap-space-sm bg-surface-container-lowest p-space-md rounded-xl"><div class="flex items-center gap-space-xs text-secondary"><span class="material-symbols-outlined text-[20px]">shield</span><span class="font-label-md text-label-md">Campus Safety Standard</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Peer Safeguards: Coordinate exchanges safely at designated campus common spots with in-app check-ins.</p></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant"><p class="font-body-sm text-body-sm">© RentLoop Technologies Inc. Academic Campus Network. All rights reserved.</p><div class="flex items-center gap-space-lg font-body-sm text-body-sm"><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="hover:text-primary transition-colors" data-path="campus-coverage" href="#">Campus Coverage</a></div></div></div></footer>
+
+</body></html>
